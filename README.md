@@ -1,5 +1,3 @@
-se debe incluir una explicación clara sobre cómo desplegar el proyecto: desde la clonación del repositorio hasta su ejecución. Especifica también las dependencias necesarias y las herramientas necesarias para su prueba
-
 ## Requisitos ##
 - PHP 8.2.12
 - Composer (https://getcomposer.org)
