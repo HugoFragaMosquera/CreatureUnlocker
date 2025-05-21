@@ -19,6 +19,14 @@
                     <x-nav-link :href="route('tienda')" :active="request()->routeIs('tienda')" class="text-white">
                         {{ __('Tienda') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('ventas')" :active="request()->routeIs('ventas')" class="text-white">
+                        {{ __('Ventas') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('combate')" :active="request()->routeIs('combate')" class="text-white">
+                        {{ __('Combate') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -82,6 +90,14 @@
 
             <x-responsive-nav-link :href="route('tienda')" :active="request()->routeIs('tienda')">
                 {{ __('Tienda') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('ventas')" :active="request()->routeIs('ventas')">
+                {{ __('Ventas') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('combate')" :active="request()->routeIs('combate')">
+                {{ __('Combate') }}
             </x-responsive-nav-link>
         </div>
 

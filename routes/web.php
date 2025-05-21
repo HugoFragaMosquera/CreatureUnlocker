@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TiendaController;
-
+use App\Http\Controllers\CombateController;
 
 // Página de bienvenida (si aún no hay un usuario)
 Route::get('/', function () {
@@ -31,7 +31,6 @@ Route::get('/home', [HomeController::class, 'index'])
         ->middleware(['auth'])
         ->name('criatura.subirNivel');
 
-
 // Tienda
 Route::get('/tienda', function () {
     return view('tienda');
@@ -42,5 +41,23 @@ Route::get('/tienda', function () {
         ->middleware(['auth'])
         ->name('tienda.obtener');
 
+//  Ventas
+    // Página de ventas de criaturas
+    Route::get('/ventas', [HomeController::class, 'ventas'])
+        ->middleware(['auth'])
+        ->name('ventas');
+
+    // Vender criatura
+    Route::post('/criatura/{id}/vender', [HomeController::class, 'vender'])
+        ->middleware(['auth'])
+        ->name('criatura.vender');
+
+// Combate
+    Route::get('/combate', [CombateController::class, 'index'])
+        ->middleware(['auth'])
+     ->name('combate');
+     
+    // Combatir
+     Route::post('/combatir', [App\Http\Controllers\CombateController::class, 'combatir'])->name('combatir');
 
 require __DIR__.'/auth.php';

@@ -38,4 +38,17 @@ class Criatura extends Model
             'común'      => 'linear-gradient(to right,rgb(91, 221, 173),rgb(26, 163, 108))',
         };
     }
+
+    // Valor de venta de cada criatura según  su calidad
+    public function valorVenta()
+    {
+        $valores = [
+            'común' => 25,
+            'rara' => 40,
+            'épica' => 75,
+            'legendaria' => 150,
+        ];
+
+        return $valores[$this->calidad] ?? 0;
+    }
 }

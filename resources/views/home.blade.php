@@ -3,7 +3,7 @@
 @section('content')
 <section class="py-10 px-4 min-h-screen">
     <div class="tabla-wrapper">
-        <table class="border border-black" style="margin: 0 auto; width:100%; max-width:1000px;">
+        <table class="border border-black" style="margin: 0 auto; width:100%; max-width:1200px;">
             <thead>
                 <tr style="text-align:left;">
                     <th class="py-4 text-lg">
